@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Transform Rotate</title>
+  <style>
+    body{
+      display: flex;
+      width: 100vh;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    /*   ## Transform 
+    transform: rotate(45deg);
+    transform: rotate(-45deg);
+    transform: rotateX(45deg);
+    transform: rotateX(-45deg);
+    transform: rotateY(45deg);
+    transform: rotateY(-45deg);
+    transform: rotateX(45deg) rotateY(45deg) rotateZ(45deg);
+    transform: rorate3d(x , y, z, rotate);
+    transform: rorate3d(1 , 0, 0, rotate);
+    transform: rorate3d(x , y, z, rotate);    
+     */
+    .container:hover .cuadrado.a{
+      transform: rotate(45deg);
+      transition: 2s;
+    }
+    .container:hover .cuadrado.b{
+      transform: rotateY(90deg);
+      transition: 2s;
+    }
+    .container:hover .cuadrado.c{
+      transform: rotate3d(0, 1, 1, 90deg);
+      /* transform: rotate3d(0, 0, 1, 45deg); */
+      transition: 2s;
+    }
+    .container:hover .cuadrado.d {
+      transform: rotateY(-90deg);
+      transition: 2s;
+    }
+    .container:hover .cuadrado.e {
+      
+      transform: rotateX(45deg) skew(30deg);
+      transition: 2s;
+    }
+    .container:hover .cuadrado.f {
+      transform: rotateX(-45deg) skew(-30deg);
+      transition: 2s;
+    }
+    .container {
+      padding: 20px;
+      display: flex;
+      /* transform: rorate3d(x , y, z, rotate); */
+      flex-flow: wrap;
+      justify-content: space-around;
+      border: 1px solid red;
+    }
+    .cuadrado {
+      width: 200px;
+      height: 200px;
+      background-color: #7dc900;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="cuadrado a">
+      Cuadro 1 Grado!
+    </div>
+    <div class="cuadrado b">
+      Cuadro 2 Grado!
+    </div>
+    <div class="cuadrado c">
+      Cuadro 3 Grado!
+    </div>
+    <div class="cuadrado d">
+      Cuadro 4 Grado!
+    </div>
+    <div class="cuadrado e">
+      Cuadro 5 Grado!
+    </div>
+    <div class="cuadrado f">
+      Cuadro 6 Grado!
+    </div>
+  </div>
+</body>
+</html>
