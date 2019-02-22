@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Transform origen!</title>
+</head>
+  <style>
+  body {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    perspective: 400px;
+  }
+  .contaner:hover .cuadrado{
+    /* transform-origin: x y 50% 50%; top bottom left right */
+    /* transform-origin: top; */
+    transform-origin: 40% 80%;
+    transform: rotateX(-45deg);
+    transition: 2s;
+  }
+  .contaner {
+    border: 1px solid chocolate;
+  }
+  .cuadrado{
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+    margin: 10px;
+  }
+  </style>
+<body>
+  <div class="contaner">
+    <div class="cuadrado">
+      Hola Cuadraro
+    </div>
+  </div>
+</body>
+</html>
