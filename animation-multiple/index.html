@@ -25,24 +25,13 @@
       height: 200px;
       background: #7dc900;
       margin: 20px;
-      /* transition: 2s; */
-      animation-name: cuadrado;
-      animation-duration: 2s;
-      /* animation-delay: 1s; */
-      /* animation-iteration-count: 2; */
+      color: white;
+      animation-name: cuadrado , rebote;
+      animation-duration: 3s, .3s;
       animation-iteration-count: infinite;
-      /* animation-timing-function: ease; */
-       /* animation-timing-function: ease-in; */
-      /* animation-timing-function: ease-in-out; */
-      /* animation-timing-function: linear; */
-      animation-timing-function: cubic-bezier(.73,.02,.12,.87); 
-      
-      /* 30 pasos o cuadros por segundos */
-      /* animation-timing-function:steps(30); */
-      /* animation-direction: reverse; */
       animation-direction: alternate;
-      /* animation-fill-mode: forwards; */
       animation-play-state: running;
+      animation-timing-function: linear, ease-in-out;
       position: relative;
     }
     @keyframes cuadrado{
@@ -53,6 +42,14 @@
       100% {
         opacity: 0.5;
         left: calc(100% - 240px);
+      }
+    }
+    @keyframes rebote{
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(50px) scale(1,.8);
       }
     }
   </style>
