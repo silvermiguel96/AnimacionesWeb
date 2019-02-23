@@ -22,19 +22,40 @@
       background-color: red;
       border-radius: 50%;
     }
+    .btn {
+      text-align: center;
+      background: #7cd800;
+      padding:.6em .8em .8em;
+      border: none;
+      color: white;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: inset 0 -.2em rgb(0, 0, 0, .2);
+      outline: 0;
+      transition: .2s;
+      will-change: transform;
+    }
+    .btn:active {
+      transform: scale(0.9);
+    }
   </style>
 </head>
 <body>
     <div class="container">
-      <div class="pelota" id="pelota">
-
+      <div class="pelota" id="pelota"></div>
+      <div class="buttons">
+        <button class="btn" id="play">Play</button>
+        <button class="btn" id="pause">Pause</button>
+        <button class="btn" id="stop">Stop</button>
+        <button class="btn" id="reverse">Reverse</button>
       </div>
     </div>
     <script>
     const $pelota = document.getElementById('pelota');
 
     // element.animate(leyframes = [], Option {})
-    $pelota.animate([
+    const animation = $pelota.animate([
       // From 
       {
         transform: 'translateX(0)'
@@ -48,10 +69,29 @@
       delay: 1000,
       direction: 'normal',
       easing: 'linear',
-      interations: Infinity,
+      iterations: Infinity,
       fill: 'forwards',
       iterationStart: .5 //50%
     })
+
+    const $playButton = document.getElementById('play');
+    const $pauseButton = document.getElementById('pause');
+    const $stopButton = document.getElementById('stop');
+    const $reverseButton = document.getElementById('reverse');
+
+    $playButton.addEventListener('click', (event) => {
+      animation.play();
+    });
+    $pauseButton.addEventListener('click', (event) => {
+      animation.pause();
+    });
+    $stopButton.addEventListener('click', (event) => {
+      animation.finish();
+    });
+    $reverseButton.addEventListener('click', (event) => {
+      animation.reverse();
+      animation.play();
+    });
     </script>
 </body>
 </html>
