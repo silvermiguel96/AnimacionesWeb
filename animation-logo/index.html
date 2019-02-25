@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Animation entry and exit</title>
+  <style>
+    body{
+      display:flex;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+    .cuadrado {
+      width: 200px;
+      height: 200px;
+      background-color: #7cd900;
+      /* animation:  name time state */
+      animation: animationIn 2s alternate infinite;
+    }
+    @keyframes animationIn {
+     0%{
+      transform: translateY(-3000px);
+     }
+     50%{
+      transform: translateY(25px);
+     }
+     70%{
+       transform: translateY(-10px);
+     }
+     90%{
+       transform: translateY(5px);
+     }
+    }
+    @keyframes animationOut{
+      0%{
+        transform: translateX(0px);
+      }
+      60%{
+        transform: translateX(-25px);
+      }
+      70%{
+        transform: translateX(10px);
+      }
+      100%{
+        transform: translateX(-3000px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cuadrado">
+
+  </div>
+</body>
+</html>
