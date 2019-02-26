@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Animation Wabes</title>
+  <style>
+  body{
+    margin: 0;
+  }
+  .circulo {
+    width:200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    position: absolute;
+    animation: 5s wave infinite alternate;
+  }
+
+  .circulo.b {
+    animation-delay: 1s;
+  }
+  .circulo.c {
+    animation-delay: 2s;
+  }
+  .container {
+    position: absolute;
+  }
+  @keyframes wave {
+    0% {
+      transform:  translateX(0) translateY(0);
+    }
+    100% {
+      transform: translateX(200px)  translateY(100px);
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="circulo a"></div>
+    <div class="circulo b"></div>
+    <div class="circulo c"></div>
+  </div>
+</body>
+</html>
