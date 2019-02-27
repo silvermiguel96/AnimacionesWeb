@@ -31,7 +31,13 @@ class Guitarras extends Component {
               width="350"
             />
             </CSSTransitionGroup>
-            <div className="contenedor-guitarra-a">
+            <CSSTransitionGroup
+            transitionName="fade"
+            transitionEnterTimeout={300}
+            // transitionLeaveTimeout={300}
+            transitionLeave={false}
+            >
+            <div className="contenedor-guitarra" key={guitarra.name}>
               <h3 className="guitarra-name">{guitarra.name}</h3>
               <ol>
                 
@@ -42,6 +48,7 @@ class Guitarras extends Component {
                   })}
               </ol>
             </div>
+            </CSSTransitionGroup>
           </article>
           )
         })
