@@ -1,14 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+// import './index.css';
+import './css/invie.css';
+import './css/animation.css';
+
 import Invie from './Invie';
+import cheet from 'cheet.js';
 import * as serviceWorker from './serviceWorker';
 
+// Images 
 import logoPortada from './images/invie.png';
 import acustica from './images/invie-acustica.png';
 import classic from './images/invie-classic.png'
-
-import cheet from 'cheet.js';
+import easteA from './images/easter-a.png';
+import easteB from './images/easter-b.png';
 
 import { Provider } from 'react-redux'; // Que provee de datos a el servidor
 import { createStore } from 'redux'; // Redux como tal maneja una creacion en el store
@@ -73,6 +78,29 @@ const easter = {
       href: 'index.html',
       title: 'Home',
     },
+  ],
+  // logoPortada: logoPortada,
+  guitarras : [
+    {
+      imagen: easteA,
+      alt: 'Guitarra Invie Acustica',
+      name: 'Invie Familiar',
+      features: [
+        'Listo para copiar a los Simpsons',
+        'Aire puro',
+        'Chistes malos',
+      ]
+    },
+    {
+      imagen: easteB,
+      alt: 'Guitarra Invie Classic',
+      name: 'Invie Classic',
+      features: [
+        'Estilo vintage',
+        'Liviana',
+        'Empieza tu camino como Rockstart',
+      ]
+    }
   ]
 }
 cheet('i n v i e', () => {

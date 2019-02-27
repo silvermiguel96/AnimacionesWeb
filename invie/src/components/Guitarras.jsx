@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+// import CSSTransitionGroup from 'react-transition-group';
+import CSSTransitionGroup from'react-transition-group/CSSTransitionGroup';
+// import { CSSTransition } from 'react-transition-group';
 
 function mapStateToPros(state) {
   return {
@@ -15,7 +18,19 @@ class Guitarras extends Component {
         this.props.guitarras.map((guitarra, index) => {
           return (
             <article className="guitarra" key={index}> 
-            <img className="guitarra-image" src={guitarra.imagen}  alt={guitarra.alt} width="350"/>
+            <CSSTransitionGroup
+              transitionName="flicker"
+              transitionEnterTimeout={500}
+              transitionLeaveTimeout={500}
+              >
+            <img 
+              className="guitarra-image"
+              key={guitarra.imagen}
+              src={guitarra.imagen}  
+              alt={guitarra.alt}
+              width="350"
+            />
+            </CSSTransitionGroup>
             <div className="contenedor-guitarra-a">
               <h3 className="guitarra-name">{guitarra.name}</h3>
               <ol>

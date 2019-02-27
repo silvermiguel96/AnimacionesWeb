@@ -8,7 +8,6 @@ function mapStateToProps(state) {
   }
 }
 
-
 class Portada extends Component {
   render() {
     return (

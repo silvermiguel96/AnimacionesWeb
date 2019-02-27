@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
-import './css/invie.css';
 import Portada from './components/Portada.jsx';
 import Guitarras from './components/Guitarras.jsx';
 import Footer from './components/Footer.jsx';
 
-import logoPortada from './images/invie.png';
-import acustica from './images/invie-acustica.png';
-import classic from './images/invie-classic.png'
+// import logoPortada from './images/invie.png';
+// import acustica from './images/invie-acustica.png';
+// import classic from './images/invie-classic.png'
 
 
 // const data = {
