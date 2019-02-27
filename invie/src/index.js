@@ -19,6 +19,7 @@ import { Provider } from 'react-redux'; // Que provee de datos a el servidor
 import { createStore } from 'redux'; // Redux como tal maneja una creacion en el store
 
 const inicialstate = {
+  isAnimated:  false,
   menu:[
     {
       href: 'index.html',
@@ -73,6 +74,7 @@ function reducer(state, action) {
 const store = createStore(reducer, inicialstate);
 
 const easter = {
+  isAnimated: 'is-animated',
   menu:[
     {
       href: 'index.html',
