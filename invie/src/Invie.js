@@ -4,10 +4,20 @@ import './css/invie.css';
 import Portada from './components/Portada.jsx';
 import Guitarras from './components/Guitarras.jsx';
 import Footer from './components/Footer.jsx';
+
 import logoPortada from './images/invie.png';
 import acustica from './images/invie-acustica.png';
 import classic from './images/invie-classic.png'
 
+import cheeet from 'cheet.js';
+
+cheeet('i n v i e', () => {
+  console.log('Lo lograste describiste el Easter EGG');
+});
+
+cheeet('g o b a c k', () => {
+  console.log('Volviendo al estadio inicial')
+})
 const data = {
   menu:[
     {
